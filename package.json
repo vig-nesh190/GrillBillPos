@@ -1,0 +1,22 @@
+{
+  "name": "ember-grill-pos-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js and Express API for the Ember Grill Angular POS demo, using MongoDB Atlas.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js && node --check src/config/database.js && node --check src/routes/products.routes.js && node --check src/routes/sales.routes.js && node --check src/routes/settings.routes.js && node --check src/models/Product.js && node --check src/models/Invoice.js && node --check src/models/Settings.js && node --check src/models/Counter.js && node --check src/utils/defaults.js && node --check src/utils/asyncHandler.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.11.0"
+  }
+}
